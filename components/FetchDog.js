@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, Button, TouchableOpacity } from 'react-native';
+import { Text, View, SafeAreaView, Image, Button, TouchableOpacity } from 'react-native';
 import React, { useState, useEffect, useContext } from "react";
 import { FavoriteDogFact } from './FavoriteFact';
 
@@ -12,10 +12,9 @@ const FetchDog = () => {
     const url = "https://api.jsonbin.io/b/6130c06e2f1cab416bd26653";
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState(null);
-    const [dogFact, setDogFact] = useState(null)
     const [counter, setCounter] = useState(0);
 
-    const { dogValue, setDogValue } = useContext(FavoriteDogFact);
+    const { setDogValue } = useContext(FavoriteDogFact);
 
     useEffect(() => {
         fetch(url)
@@ -26,7 +25,6 @@ const FetchDog = () => {
     }, [])
 
     function getDogFact() {
-        console.log(data[counter])
         setLoading(false)
         if(counter >= data.length - 1) {
             setCounter(0)
@@ -58,7 +56,7 @@ const FetchDog = () => {
 
                     <View style={{ display: "flex", flexDirection: "column", alignSelf: "flex-end" }}>
                         <TouchableOpacity
-                            activeOpacity={0.4}
+                            activeOpacity={0.3}
                             onPress={() => {
                                 //lägg till favoritfakta längre ner 
                                 setDogValue(data[counter])

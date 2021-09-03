@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View, Image, Text, ScrollView } from 'react-native';
+import { TouchableOpacity,Image, Text, ScrollView } from 'react-native';
 import { useContext } from 'react';
 import { FavoriteCatFact } from './FavoriteFact';
 import { FavoriteDogFact } from './FavoriteFact';

@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext, createContext } from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image, Button, TouchableOpacity } from 'react-native';
+import React, { useState,useContext} from "react";
+import { Text, View, SafeAreaView, Image, Button, TouchableOpacity } from 'react-native';
 import { FavoriteCatFact } from "./FavoriteFact";
-import FetchDog from "./FetchDog";
 
 // https://catfact.ninja/   breeds , fact , facts
 // 3 lines image https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552729004xrpivp1smd.png
@@ -15,7 +14,7 @@ const FetchCat = () => {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
 
-    const { catValue, setCatValue } = useContext(FavoriteCatFact);
+    const { setCatValue } = useContext(FavoriteCatFact);
 
     function getCatFact() {
         fetch(url)
@@ -46,7 +45,7 @@ const FetchCat = () => {
                     >{data}</Text>
                     <View style={{ display: "flex", flexDirection: "column", alignSelf: "flex-end" }}>
                         <TouchableOpacity
-                            activeOpacity={0.4}
+                            activeOpacity={0.3}
                             onPress={() => {
                                 setCatValue(data)
                             }}>
