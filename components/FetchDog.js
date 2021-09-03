@@ -51,8 +51,6 @@ const FetchDog = () => {
                         <TouchableOpacity
                             activeOpacity={0.4}
                             onPress={() => {
-                                console.log("Add to favorites button")
-                                
                                 //lägg till favoritfakta längre ner 
                                 setDogValue(data)
                             }}>

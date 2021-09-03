@@ -31,7 +31,6 @@ const FetchCat = () => {
                 <Button
                     title="Fact button!"
                     onPress={() => {
-                        console.log("Fetch cat fact")
                         getCatFact();
                     }}>
                 </Button>
@@ -45,8 +44,7 @@ const FetchCat = () => {
                         borderRadius: "5px", border: "1px solid black", background: "lightgray", padding: "5px"
                     }}
                     >{data}</Text>
-
-                    <View style={{ display: "flex", flexDirection: "column", alignSelf: "flex-end"}}>
+                    <View style={{ display: "flex", flexDirection: "column", alignSelf: "flex-end" }}>
                         <TouchableOpacity
                             activeOpacity={0.4}
                             onPress={() => {
