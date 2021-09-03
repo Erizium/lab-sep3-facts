@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "laboration-sep3",
+    "slug": "laboration-sep3",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "laboration-sep3"
+}
